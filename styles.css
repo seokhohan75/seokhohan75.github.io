@@ -5,3 +5,25 @@
 .editorial-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.gallery-item{margin:0}.gallery-item img{display:block;width:100%;height:auto}.gallery-item figcaption{font-size:12px;color:#606064;padding:12px 0}.split>.gallery-item img{max-height:650px;object-fit:contain}.additional-work{margin-top:28px}@media(max-width:760px){.editorial-gallery{grid-template-columns:1fr}}
 .comparison-section{max-width:960px;margin:auto;scroll-margin-top:100px}.compare-row{padding:22px 0;border-bottom:1px solid #e4e4e7}.compare-row h3{font-size:18px;margin:0 0 8px}.compare-row .comparison{gap:20px;grid-template-columns:repeat(2,minmax(0,1fr))}.compare-row .comparison img{height:auto;aspect-ratio:1.88;object-fit:contain;background:white}.compare-row figcaption{font-size:11px;padding:8px 0}.compare-row figcaption b{letter-spacing:1px;margin-right:6px}.compare-row a{display:block}.compare-row a:hover{outline:2px solid #965000}.more-comparisons{margin-top:24px;border-bottom:1px solid #e4e4e7}.more-comparisons summary{padding:12px 0}.more-comparisons summary span{float:right}.more-comparisons[open] summary span{transform:rotate(45deg)}summary:focus-visible{outline:3px solid #27272a;outline-offset:4px}@media(max-width:500px){.compare-row .comparison{gap:8px}.compare-row figcaption{font-size:10px}.compare-row h3{font-size:16px}}
 .compact-gallery-section{padding-top:65px;padding-bottom:20px}.compact-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:22px}.gallery-thumb{display:block;min-width:0;background:#fff;border:1px solid #e4e4e7;border-radius:4px;padding:8px;transition:transform .18s,box-shadow .18s}.gallery-thumb img{display:block;width:100%;height:112px;object-fit:contain;background:#f4f4f4}.gallery-thumb span{display:block;font-size:10px;padding-top:8px;color:#606064}.gallery-thumb small{float:right}.gallery-thumb:focus-visible{outline:3px solid #965000;outline-offset:3px}@media(hover:hover){.gallery-thumb:hover{transform:scale(1.06);box-shadow:0 8px 25px #0002;position:relative;z-index:2}}#image-viewer{width:94vw;max-width:1600px;max-height:94vh;padding:16px;border:0;border-radius:8px;background:#f7f7f7;color:#18181b}#image-viewer::backdrop{background:#101014dd}.viewer-bar,.viewer-controls{display:flex;align-items:center;justify-content:space-between;gap:12px}.viewer-bar p{margin:0;font-size:13px}#viewer-image{display:block;width:100%;height:74vh;object-fit:contain;background:#ededed;margin:12px 0}.viewer-controls button,.viewer-bar button{font:inherit;font-size:13px;border:1px solid #ccc;border-radius:4px;background:white;padding:10px 14px;cursor:pointer}.viewer-controls a{font-size:12px;text-decoration:underline}@media(max-width:900px){.compact-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:600px){.compact-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-thumb img{height:100px}#viewer-image{height:65vh}.viewer-controls button{padding:10px;font-size:12px}.viewer-bar p{font-size:11px}}@media(prefers-reduced-motion:reduce){.gallery-thumb{transition:none}}
+
+/* Work navigation disclosure */
+nav[aria-label="Main navigation"]{align-items:center}
+.work-menu{position:relative;padding:0;border:0}
+.work-menu summary{list-style:none;cursor:pointer;font-weight:inherit;white-space:nowrap}
+.work-menu summary::-webkit-details-marker{display:none}
+.work-menu summary span{display:inline-block;font-size:10px;margin-left:4px}
+.work-menu[open] summary{color:#965000}
+.work-menu[open] summary span{transform:rotate(180deg)}
+.work-menu summary:focus-visible{outline:3px solid #965000;outline-offset:6px}
+.work-dropdown{position:absolute;top:calc(100% + 18px);left:0;width:270px;padding:14px;background:#fff;border:1px solid #e4e4e7;border-radius:8px;box-shadow:0 16px 40px #18181b20;max-height:70vh;overflow:auto;z-index:20}
+.work-dropdown a{display:block!important;padding:8px 12px;border-radius:4px;font-size:14px;color:#18181b}
+.work-dropdown a:hover,.work-dropdown a:focus-visible{background:#f4f4f5;color:#965000}
+.work-dropdown a[aria-current="page"]{background:#f4f4f5;font-weight:700}
+.work-dropdown p{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin:14px 12px 4px;color:#646468}
+.work-dropdown .work-sketch{border-top:1px solid #e4e4e7;margin-top:10px;padding-top:12px}
+@media(max-width:760px){
+.nav{flex-wrap:wrap;gap:16px}
+nav[aria-label="Main navigation"]{flex-wrap:wrap;gap:18px}
+.work-dropdown{width:min(270px,88vw)}
+}
+
